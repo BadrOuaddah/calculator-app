@@ -105,9 +105,7 @@ if (empty($number_1)) {
 </head>
 
 <body>
-    <div class="">
 
-    </div>
     <div class="container">
         <form action="index.php" method="POST" class="form">
             <div>
