@@ -117,44 +117,85 @@ if (empty($number_1)) {
 
 <body>
 
-    <div class="container">
-        <form action="index.php" method="GET" class="form">
-            <div>
-                <label>Enter Number 1 : </label>
-                <input type="number" id="number_1" name="number_1" class="form-control">
-            </div>
 
-            <div>
-                <label>Enter Number 2 : </label>
-                <input type="number" id="number_2" name="number_2" class="form-control">
-            </div>
-            <div>
-                <label>
-                    Operation : (You can enter the following words or symbols : 'addition' or "+" ; 'subtraction' or "-"
-                    ; 'multiplication' or "*" ; 'division' or "/" ; 'power' or "^")
-                </label>
-                <input type="text" id="op" name="op" class="form-control">
-            </div>
 
+    <!-- 
+
+    <div class="col d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <div class="card-header">
+                    <h5 class="card-title" style="text-align: center;">
+                        Card title
+                    </h5>
+                </div>
+                <br>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <div class="card-footer">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <br>
-    <center>
-        <input type="submit" class="btn btn-primary" value="Do it">
-    </center>
-    <br>
+ -->
+
+    <div class="col d-flex justify-content-center">
+        <div class="card">
+            <div class="container">
+                <div class="card-body">
+                    <div class="card-header">
+                        <h5 class="card-title" style="text-align: center;">
+                            Calculator
+                        </h5>
+                    </div>
+                    <form action="index.php" method="GET" class="form">
+                        <div>
+                            <label>Enter Number 1 : </label>
+                            <input type="number" id="number_1" name="number_1" class="form-control">
+                        </div>
+
+                        <div>
+                            <label>Enter Number 2 : </label>
+                            <input type="number" id="number_2" name="number_2" class="form-control">
+                        </div>
+                        <div>
+                            <label>
+                                Operation : (You can enter the following words or symbols : 'addition' or "+" ; 'subtraction' or "-"
+                                ; 'multiplication' or "*" ; 'division' or "/" ; 'power' or "^")
+                            </label>
+                            <input type="text" id="op" name="op" class="form-control">
+                        </div>
+                        <br>
+                        <center>
+                            <input type="submit" class="btn btn-primary" value="Do it">
+                        </center>
+                        <br>
+                        <div class="card-footer">
+                            <br>
+                            <div class="alert alert-success">
+                                Result is :
+                                <?php
+                                echo $result;
+                                ?>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <div>
         <label for="checkbox_ square_root">
             <input type="checkbox" name="checkbox_ square_root" id="checkbox_ square_root" value="yes">
             click here !
         </label>
     </div>
-    <br>
-    <div class="alert alert-success">
-        Result is :
-        <?php
-        echo $result;
-        ?>
-    </div>
+
     </form>
 
     <script>
