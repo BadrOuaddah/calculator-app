@@ -1,8 +1,9 @@
 <?php
 
-$number_1 = $_POST["number_1"];
-$number_2 = $_POST["number_2"];
-$op = $_POST["op"];
+$number_1 = $_GET["number_1"];
+$number_2 = $_GET["number_2"];
+$op = $_GET["op"];
+// $box = $_GET["checkbox_ square_root"];
 
 // math funtions
 function addition($number_1, $number_2)
@@ -31,6 +32,16 @@ function power($number_1, $number_2)
     return $result;
 };
 
+
+// TODO add aquare root function to calculator
+// function square_root($number_1)
+// {
+//     $result = sqrt($number_1);
+//     return $result;
+// }
+// TODO add aquare root function to calculator
+
+
 // user have must enter data
 if (empty($number_1)) {
     $result = "first number is empty, please enter number 1 !";
@@ -39,7 +50,6 @@ if (empty($number_1)) {
 } elseif (empty($op)) {
     $result = "please enter operation !";
 } else {
-
     // ! after user have enter data
 
     // with IF statement
@@ -55,6 +65,7 @@ if (empty($number_1)) {
     } elseif ($op === 'power' or $op === '^') {
         $result = power($number_1, $number_2);
     }
+
 
     // ! with SWITCH statement
 
@@ -109,7 +120,7 @@ if (empty($number_1)) {
 
     </div>
     <div class="container">
-        <form action="index.php" method="POST" class="form">
+        <form action="index.php" method="GET" class="form">
             <div>
                 <label>Enter Number 1 : </label>
                 <input type="number" id="number_1" name="number_1" class="form-control">
@@ -133,6 +144,13 @@ if (empty($number_1)) {
         <input type="submit" class="btn btn-primary" value="Do it">
     </center>
     <br>
+    <div>
+        <label for="checkbox_ square_root">
+            <input type="checkbox" name="checkbox_ square_root" id="checkbox_ square_root" value="yes">
+            click here !
+        </label>
+    </div>
+    <br>
     <div class="alert alert-success">
         Result is :
         <?php
@@ -140,6 +158,10 @@ if (empty($number_1)) {
         ?>
     </div>
     </form>
+
+    <script>
+
+    </script>
 
 </body>
 
